@@ -1,0 +1,80 @@
+<svg width="80" height="80" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Glow filter for polished, techy effect -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke="#d38bfc" stroke-width="1.5">
+        <!-- Morphing diamond -->
+        <path d="M28 12 L44 28 L28 44 L12 28 Z" filter="url(#glow)">
+            <animate attributeName="d"
+                values="M28 12 L44 28 L28 44 L12 28 Z;M28 10 L46 28 L28 46 L10 28 Z;M28 12 L44 28 L28 44 L12 28 Z"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 28 28"
+                to="360 28 28"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </path>
+        <!-- Pulsing connection lines -->
+        <path d="M28 12 L28 44 M12 28 L44 28" stroke-opacity="0.3">
+            <animate attributeName="stroke-dasharray"
+                values="0 50;25 25;0 50"
+                dur="1.5s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="opacity"
+                values="0.3;0.5;0.3"
+                dur="1.5s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </path>
+        <!-- Corner nodes -->
+        <circle cx="28" cy="12" r="3" filter="url(#glow)">
+            <animate attributeName="r"
+                values="3;4;3"
+                dur="1.2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+        <circle cx="44" cy="28" r="3" filter="url(#glow)">
+            <animate attributeName="r"
+                values="3;4;3"
+                dur="1.2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+        <circle cx="28" cy="44" r="3" filter="url(#glow)">
+            <animate attributeName="r"
+                values="3;4;3"
+                dur="1.2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+        <circle cx="12" cy="28" r="3" filter="url(#glow)">
+            <animate attributeName="r"
+                values="3;4;3"
+                dur="1.2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+    </g>
+</svg>

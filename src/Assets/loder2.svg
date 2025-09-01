@@ -1,0 +1,106 @@
+<svg width="80" height="80" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Glow filter for futuristic, polished effect -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke="#d38bfc" stroke-width="1.5">
+        <!-- Spinning helix (two curved paths) -->
+        <path d="M28 12 C22 18 22 38 28 44" filter="url(#glow)">
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 28 28"
+                to="360 28 28"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="stroke-dasharray"
+                values="50 50;75 25;50 50"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </path>
+        <path d="M28 12 C34 18 34 38 28 44" filter="url(#glow)">
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="360 28 28"
+                to="0 28 28"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="stroke-dasharray"
+                values="50 50;25 75;50 50"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </path>
+        <!-- Radiating spark 1 -->
+        <circle cx="28" cy="12" r="2" filter="url(#glow)">
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 28 28"
+                to="360 28 28"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="cy"
+                values="12;8;12"
+                dur="1.5s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="opacity"
+                values="1;0.5;1"
+                dur="1.5s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+        <!-- Radiating spark 2 (offset) -->
+        <circle cx="28" cy="44" r="2" filter="url(#glow)">
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="360 28 28"
+                to="0 28 28"
+                dur="2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="cy"
+                values="44;48;44"
+                dur="1.5s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+            <animate attributeName="opacity"
+                values="1;0.5;1"
+                dur="1.5s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+        <!-- Subtle background circle for depth -->
+        <circle cx="28" cy="28" r="18" stroke-opacity="0.2">
+            <animate attributeName="opacity"
+                values="0.2;0.4;0.2"
+                dur="2.2s"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1;0.4 0 0.2 1"
+                repeatCount="indefinite"/>
+        </circle>
+    </g>
+</svg>
