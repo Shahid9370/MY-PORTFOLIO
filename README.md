@@ -96,7 +96,7 @@ Your resume is viewable and downloadable directly from the site.
 
 ## 📬 Contact
 
-For inquiries, use the contact form on the site or reach out via [LinkedIn](#) / [Email](#).
+For inquiries, use the contact form on the site or reach out via [LinkedIn](https://www.linkedin.com/in/shahid-shaikh-68993a214/) / [Email](shahidsrs93@gmail.com).
 
 ---
 
