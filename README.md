@@ -72,7 +72,11 @@ Example:
 
 ## 🖼️ Screenshots
 
-_Attach your screenshots in this section to showcase different sections (About, Resume, Projects, Contact, etc.)_
+<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/4e26194c-42ca-48f7-8e27-143d096c59ad" />
+
+<img width="1366" height="718" alt="image" src="https://github.com/user-attachments/assets/5dc00039-d812-46e8-9058-8e6b6325a6be" />
+
+<img width="1366" height="722" alt="image" src="https://github.com/user-attachments/assets/dfa4c048-cfea-41bd-ad2e-2f5cca46c9c6" />
 
 ---
 
@@ -92,7 +96,7 @@ Your resume is viewable and downloadable directly from the site.
 
 ## 📬 Contact
 
-For inquiries, use the contact form on the site or reach out via [LinkedIn](#) / [Email](#).
+For inquiries, use the contact form on the site or reach out via [LinkedIn](https://www.linkedin.com/in/shahid-shaikh-68993a214/) / [Email](shahidsrs93@gmail.com).
 
 ---
 
