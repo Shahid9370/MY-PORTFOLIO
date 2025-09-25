@@ -83,7 +83,7 @@ function ContactUs() {
         <div className="contactus-details">
           <h2>Contact Details</h2>
           <p><span>📍</span> Address: Pune, Maharashtra, India</p>
-          <p><span>📞</span> Phone: +91 937003479</p>
+          <p><span>📞</span> Phone: +91 9370034794</p>
           <p><span>📧</span> Email: shahidsrs93@gmail.com</p>
           <h3>Our Location</h3>
           <div className="contactus-map">
@@ -91,10 +91,6 @@ function ContactUs() {
               title="Pune Map"
               width="100%"
               height="180"
-              frameBorder="0"
-              scrolling="no"
-              marginHeight="0"
-              marginWidth="0"
               src="https://maps.google.com/maps?width=399&amp;height=245&amp;hl=en&amp;q=Magarpatta%20Pune+(Pune%20City)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               allowFullScreen
             ></iframe>
