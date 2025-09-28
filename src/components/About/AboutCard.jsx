@@ -1,14 +1,45 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 
+
 function AboutCard() {
+  const [loaded, setLoaded] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const cardRef = useRef();
+
+  // Page load effect
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  // Scroll effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.3 }
+    );
+
+    if (cardRef.current) observer.observe(cardRef.current);
+    return () => {
+      if (cardRef.current) observer.unobserve(cardRef.current);
+    };
+  }, []);
+
   return (
-    <Card className="quote-card-view">
+    <Card
+      ref={cardRef}
+      className={`quote-card-view 
+                  ${loaded ? "about-card-pop-in" : ""} 
+                  ${visible ? "about-card-scroll-pop visible" : "about-card-scroll-pop"}`}
+    >
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Shahid Shaikh</span> from <span className="purple">Pune, India</span>.
+            Hi Everyone, I am <span className="purple">Shahid Shaikh</span> from{" "}
+            <span className="purple">Pune, India</span>.
             <br />
             I am currently working as a <b>Web Developer Intern</b>.
             <br />
